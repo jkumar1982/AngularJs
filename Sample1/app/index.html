@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>edoras one</title>
+    <meta name="viewport" content="width=device-width"/>    
+    <link rel="stylesheet" type="text/css" media="all" href="../cssstyle.css" />
+	<link rel="stylesheet/less" type="text/css" href="test/style.less">
+	<script type="text/javascript">
+		/* Put Less in development mode */
+		less = {};
+		less.env = 'development';
+	</script>
+	<script src="test/less.min.js"></script>
+	<script type="text/javascript">
+		/* Enable Less auto reloading */
+		less.watch();
+	</script>
+  
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="../node_modules/angular-mocks/angular-mocks.js"></script>
+</head>
+<body>
+	<div id="header">Header</div>
+</body>
+</html>
