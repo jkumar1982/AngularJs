@@ -1,0 +1,17 @@
+{
+  "TITLE": "AngularJS Kurs - Endgültige Übung",
+  "TAGLINE": "AngularJS Kurs - Endgültige Übung",
+  "HOME": "Heim",
+  "SEARCH": "Suche",
+  "NEWS_SEARCH": "Nachrichten Suche",
+  "KEYWORD": "Schlüsselwort",
+  "CATEGORY": "Klasse",
+  "SUBCATEGORY": "Unterklasse",
+  "CHOOSE_CATEGORY": "-- wählen Sie eine Klasse aus --",
+  "CHOOSE_SUBCATEGORY": "-- wählen Sie eine Unterklasse aus --",
+  "ARTICLE_MAINTENANCE": "Artikel Verwaltung",
+  "ARTICLE_TITLE": "Titel",
+  "ARTICLE_SUBTITLE": "Untertitel",
+  "ARTICLE_TEXT": "Text",
+  "UPDATE": "Updaten"
+}

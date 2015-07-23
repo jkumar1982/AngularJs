@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Dependency Injection I - Constant, Value, Factory, Service</title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body class="container" ng-app="app1">
+        <div class="jumbotron">
+            <h2>AngularJS Dependency Injection I - Constant, Value, Factory, Service</h2>
+
+            <h3>Service: <span ng-controller="ServiceController" ng-bind="value">Value: </span></h3>
+
+            <h3>Factory: <span ng-controller="FactoryController">{{value}}</span></h3>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="app1.js"></script>
+    </body>
+</html>

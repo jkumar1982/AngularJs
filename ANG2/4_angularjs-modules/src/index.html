@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - AngularJS Modules</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body class="container">
+        <div class="jumbotron" ng-controller="GreeterController as greeterController">
+            <h1>AngularJS Course - AngularJS Modules</h1>
+
+            <input ng-model="greeterController.name">
+            <h4 ng-bind="greeterController.greet()"></h4>
+        </div>
+
+        <script src="../node_modules/babel-core/browser.js"></script>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="app.js" type="text/ecmascript-6"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<div class="jumbotron">
+    <h2 translate="NEWS_SEARCH"></h2>
+
+    <form name="SearchFormController" ng-submit="search(criteria, SearchFormController.$valid)" class="form-horizontal">
+        <input ac-control-group="KEYWORD" type="text" ng-model="criteria.keyword" class="form-control" required>
+
+        <select ac-control-group="CATEGORY" ng-model="criteria.category" ng-options="category.label for category in categories" class="form-control" required>
+            <option value="" translate="CHOOSE_CATEGORY"></option>
+        </select>
+
+        <select ac-control-group="SUBCATEGORY" ng-model="criteria.subcategory" ng-options="subcategory.label for subcategory in criteria.category.subcategories" class="form-control">
+            <option value="" translate="CHOOSE_SUBCATEGORY"></option>
+        </select>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-default pull-right" ng-disabled="SearchFormController.$invalid" translate="SEARCH"></button>
+            </div>
+        </div>
+    </form>
+    <table class="table" ng-show="results">
+        <thead>
+            <tr>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="result in results">
+                <td><a ng-href="#article/{{result.id}}" ng-bind="result.title"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

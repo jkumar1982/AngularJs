@@ -1,0 +1,19 @@
+[
+  {
+    "name": "John",
+    "surname": "Smith",
+    "resident": true,
+    "canton": "ZH"
+  },
+  {
+    "name": "Martin",
+    "surname": "Muster",
+    "resident": false
+  },
+  {
+    "name": "Brigitte",
+    "surname": "Dolani",
+    "resident": true,
+    "canton": "BS"
+  }
+]

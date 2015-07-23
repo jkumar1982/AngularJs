@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <h2 translate="ARTICLE_MAINTENANCE"></h2>
+
+    <form name="ArticleFormController" ng-submit="update(article, ArticleFormController.$valid)" class="form-horizontal">
+        <input ac-control-group="ARTICLE_TITLE" type="text" ng-model="article.title" class="form-control" required>
+
+        <input ac-control-group="ARTICLE_SUBTITLE" type="text" ng-model="article.subtitle" class="form-control" required>
+
+        <textarea ac-control-group="ARTICLE_TEXT" ng-model="article.text" class="form-control"></textarea>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-default pull-right" ng-disabled="ArticleFormController.$invalid" translate="UPDATE"></button>
+            </div>
+        </div>
+    </form>
+</div>

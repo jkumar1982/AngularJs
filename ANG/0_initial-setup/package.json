@@ -1,0 +1,14 @@
+{
+    "name": "0_initial_setup",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "node node_modules/karma/bin/karma start"
+    },
+    "license": "ISC",
+    "repository": "https://stash.edorasware.com/projects/ANG/repos/0_initial-setup",
+    "devDependencies": {
+        "karma-firefox-launcher": "^0.1.3",
+        "karma-jasmine": "^0.1.5",
+        "karma": "^0.12.14"
+    }
+}

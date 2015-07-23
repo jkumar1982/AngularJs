@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td translate="NAME"></td>
+            <td translate="SURNAME"></td>
+            <td translate="RESIDENT"></td>
+            <td translate="CANTON"></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in userListController.users">
+            <td><a ng-href="#/user-data/{{user.name}}" ng-bind="user.name"></a></td>
+            <td ng-bind="user.surname"></td>
+            <td ng-bind="user.resident"></td>
+            <td ng-bind="user.canton"></td>
+        </tr>
+    </tbody>
+</table>

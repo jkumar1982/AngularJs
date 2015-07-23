@@ -1,0 +1,45 @@
+{
+  "name": "11_modularization",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "test": "node node_modules/karma/bin/karma start --singleRun"
+  },
+  "devDependencies": {
+    "atomify": "^6.0.3",
+    "body-parser": "1.0.2",
+    "express": "4.1.1",
+    "resrcify": "^1.1.3"
+  },
+  "dependencies": {
+    "angular-bsfy": "^1.2.26",
+    "angular-translate": "2.4.2",
+    "bootstrap": "^3.3.1",
+    "jquery": "^2.1.1",
+    "lodash": "^2.4.1"
+  },
+  "browser": {
+    "angular": "./node_modules/angular-bsfy/index.js",
+    "angular-route": "./node_modules/angular-bsfy/route.js",
+    "angular-translate": "./app/angular-translate.js",
+    "master-data": "./app/master-data/master-data-module.js"
+  },
+  "atomify": {
+    "server": {
+      "lr": true
+    },
+    "js": {
+      "entry": "app/main.js",
+      "output": "app/app.js",
+      "debug": true
+    },
+    "css": {
+      "entry": "app/main.css",
+      "output": "app/app.css"
+    },
+    "assets": {
+      "dest": "app/assets",
+      "prefix": "assets/"
+    }
+  }
+}

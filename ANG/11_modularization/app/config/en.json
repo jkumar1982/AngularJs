@@ -1,0 +1,17 @@
+{
+  "TITLE": "AngularJS Course - Modularization",
+  "TAGLINE": "AngularJS Course - Modularization",
+  "HOME": "Home",
+  "SEARCH": "Search",
+  "NEWS_SEARCH": "News Search",
+  "KEYWORD": "Keyword",
+  "CATEGORY": "Category",
+  "SUBCATEGORY": "Subcategory",
+  "CHOOSE_CATEGORY": "-- choose a category --",
+  "CHOOSE_SUBCATEGORY": "-- choose a subcategory --",
+  "ARTICLE_MAINTENANCE": "Article maintenance",
+  "ARTICLE_TITLE": "Title",
+  "ARTICLE_SUBTITLE": "Subitle",
+  "ARTICLE_TEXT": "Text",
+  "UPDATE": "Update"
+}

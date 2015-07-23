@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - Initial Setup</title>
+        <link rel="stylesheet" href="app-hash.css"/>
+    </head>
+    <body class="container" ng-app="app">
+        <div class="jumbotron" ng-controller="TestController as testController">
+            <h1>AngularJS Course - Initial Setup</h1>
+
+            <input ng-model="testController.name">
+            <button ng-click="testController.greet()">Update</button>
+            <h4 ng-bind="testController.greeting"></h4>
+        </div>
+
+        <script src="vendor-hash.js"></script>
+        <script src="app-hash.js"></script>
+    </body>
+</html>

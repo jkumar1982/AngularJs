@@ -1,0 +1,57 @@
+<form class="form-horizontal" name="userDataFormController"
+      ng-controller="UserDataController as userDataController"
+      ng-submit="userDataController.submit(userDataFormController.$valid)"
+      novalidate>
+    <div class="alert alert-danger" ng-if="userDataController.showMessages(userDataFormController)">
+        <div ng-messages="userDataFormController.name.$error">
+            <div ng-message="required" translate="NAME_REQUIRED"></div>
+        </div>
+        <div ng-messages="userDataFormController.surname.$error">
+            <div ng-message="required" translate="SURNAME_REQUIRED"></div>
+        </div>
+        <div ng-messages="userDataFormController.canton.$error">
+            <div ng-message="required" translate="CANTON_REQUIRED"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="name" translate="NAME"></label>
+
+        <div class="col-sm-9">
+            <input class="form-control" id="name" name="name" ng-model="userDataController.userData.name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="surname" translate="SURNAME"></label>
+
+        <div class="col-sm-9">
+            <input class="form-control" id="surname" name="surname" ng-model="userDataController.userData.surname" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="resident" translate="RESIDENT">Residence in Switzerland</label>
+
+        <div class="col-sm-1">
+            <input id="resident" ng-model="userDataController.userData.resident" type="checkbox">
+        </div>
+
+        <div class="col-sm-8">
+            <select class="form-control" id="canton" name="canton"
+                    ng-model="userDataController.userData.canton"
+                    ng-required="userDataController.userData.resident"
+                    ng-options="canton.id as canton.name for canton in userDataController.cantons">
+                <option value="">-- Please, choose a canton --</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button class="btn btn-default pull-right" type="submit" translate="SEND"></button>
+        </div>
+    </div>
+    <div class="alert"
+         ng-class="{'alert-success': userDataController.result.message, 'alert-danger': userDataController.result.error}"
+         ng-if="userDataController.result">
+        <span ng-bind="userDataController.result.message || userDataController.result.error"></span>
+    </div>
+</form>

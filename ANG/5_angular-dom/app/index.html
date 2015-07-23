@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS DOM - ng-class, ng-mouseenter, ng-mouseleave, ng-click, ng-change</title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body class="container" ng-app="app">
+        <div class="jumbotron" ng-controller="DOMController">
+            <h2>AngularJS DOM - ng-class, ng-mouseenter, ng-mouseleave, ng-click, ng-change</h2>
+
+            <h4 class="alert" ng-init="hoverStyle = 'alert-warning'" ng-mouseenter="hoverStyle = 'alert-success'" ng-mouseleave="hoverStyle = 'alert-warning'" ng-class="hoverStyle">Hover on me to change the alert type!!</h4>
+
+            <h4 class="alert" ng-class="selectStyle">
+                Select the alert type!!
+                <select ng-model="selectStyle" ng-options="alertCategory.id as alertCategory.label for alertCategory in alertCategories" class="pull-right">
+                    <option value="">-- select an alert type --</option>
+                </select>
+            </h4>
+
+            <h4 style="cursor: pointer;" class="alert" ng-init="clickStyle = 0" ng-click="clickStyle = clickStyle + 1"
+                ng-class="{'alert-danger': clickStyle % 3 === 0, 'alert-warning': clickStyle % 3 === 1, 'alert-success': clickStyle % 3 === 2}">Click on me to change the alert type!!</h4>
+
+            <h4 class="alert {{alertStyle}}">
+                Type something to change the style: <input type="text" ng-model="changeStyle" ng-change="updateAlertStyle(changeStyle)">
+            </h4>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

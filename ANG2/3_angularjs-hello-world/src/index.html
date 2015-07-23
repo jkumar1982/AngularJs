@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - AngularJS Hello World</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body class="container" ng-app>
+        <div class="jumbotron" ng-init="name = 'AngularJS'">
+            <h1>AngularJS Course - AngularJS Hello World</h1>
+
+            <input ng-model="name">
+            <h4 ng-bind="'Hello ' + name + '!'"></h4>
+        </div>
+
+        <script src="../node_modules/angular/angular.js"></script>
+    </body>
+</html>

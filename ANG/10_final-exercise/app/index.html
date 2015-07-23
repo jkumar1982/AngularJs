@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title translate="TITLE"></title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <ac-navigation-bar>
+            <ac-language-bar></ac-language-bar>
+        </ac-navigation-bar>
+
+        <div class="container" ng-view></div>
+
+        <script src="../bower_components/angular/angular.js" language="JavaScript"></script>
+        <script src="../bower_components/angular-route/angular-route.js" language="JavaScript"></script>
+        <script src="../bower_components/angular-translate/angular-translate.min.js" language="JavaScript"></script>
+        <script src="core/core-module.js" language="JavaScript"></script>
+        <script src="core/ac-language-bar-directive.js" language="JavaScript"></script>
+        <script src="core/i18n-service.js" language="JavaScript"></script>
+        <script src="core/ac-navigation-bar-directive.js" language="JavaScript"></script>
+        <script src="core/navigation-service.js" language="JavaScript"></script>
+        <script src="core/ac-control-group-directive.js" language="JavaScript"></script>
+        <script src="master-data/master-data-module.js" language="JavaScript"></script>
+        <script src="master-data/category-service.js" language="JavaScript"></script>
+        <script src="search/search-module.js" language="JavaScript"></script>
+        <script src="search/search-controller.js" language="JavaScript"></script>
+        <script src="search/search-service.js" language="JavaScript"></script>
+        <script src="article/article-module.js" language="JavaScript"></script>
+        <script src="article/article-controller.js" language="JavaScript"></script>
+        <script src="article/article-service.js" language="JavaScript"></script>
+        <script src="app.js" language="JavaScript"></script>
+    </body>
+</html>

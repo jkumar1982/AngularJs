@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title translate="TITLE"></title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body>
+        <ac-navigation-bar>
+            <ac-language-bar></ac-language-bar>
+        </ac-navigation-bar>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h2 translate="TITLE"></h2><br/>
+
+                <div ng-view></div>
+            </div>
+        </div>
+
+        <script src="../node_modules/babel-core/browser.js"></script>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="../node_modules/angular-messages/angular-messages.js"></script>
+        <script src="../node_modules/angular-route/angular-route.js"></script>
+        <script src="../node_modules/angular-translate/dist/angular-translate.js"></script>
+        <script src="core/core-module.js" type="text/ecmascript-6"></script>
+        <script src="core/ac-navigation-bar-directive.js" type="text/ecmascript-6"></script>
+        <script src="core/ac-language-bar-directive.js" type="text/ecmascript-6"></script>
+        <script src="core/i18n-service.js" type="text/ecmascript-6"></script>
+        <script src="core/navigation-bar-service.js" type="text/ecmascript-6"></script>
+        <script src="master-data/master-data-module.js" type="text/ecmascript-6"></script>
+        <script src="master-data/master-data-service.js" type="text/ecmascript-6"></script>
+        <script src="user-data/user-data-module.js" type="text/ecmascript-6"></script>
+        <script src="user-data/user-data-service.js" type="text/ecmascript-6"></script>
+        <script src="user-data/user-data-controller.js" type="text/ecmascript-6"></script>
+        <script src="user-list/user-list-module.js" type="text/ecmascript-6"></script>
+        <script src="user-list/user-list-service.js" type="text/ecmascript-6"></script>
+        <script src="user-list/user-list-controller.js" type="text/ecmascript-6"></script>
+        <script src="app.js" type="text/ecmascript-6"></script>
+    </body>
+</html>

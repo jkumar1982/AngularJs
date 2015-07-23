@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Forms - Basics</title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body class="container" ng-app="app">
+        <div class="jumbotron">
+            <h2>AngularJS Forms - Basics</h2>
+
+            <form ac-submit-on-enter name="UserData" ng-controller="UserDataController" ng-submit="sendData(userData)" class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="control-label col-sm-3">Name</label>
+
+                    <div class="col-sm-9">
+                        <input id="name" name="name" ng-model="userData.name" type="text" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="surname" class="control-label col-sm-3">Surname</label>
+
+                    <div class="col-sm-9">
+                        <input id="surname" name="surname" ng-model="userData.surname" type="text" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="resident" class="control-label col-sm-3">Residence in Switzerland</label>
+
+                    <div class="col-sm-1">
+                        <input id="resident" name="resident" ng-model="userData.resident" type="checkbox">
+                    </div>
+
+                    <div class="col-sm-8">
+                        <select id="canton" name="canton" ng-model="userData.canton"
+                                ng-options="canton.id as canton.name for canton in masterData.cantons"
+                                type="checkbox" class="form-control" ng-required="userData.resident">
+                            <option value="">-- Please choose a canton --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-default pull-right" ng-disabled="!UserData.$valid">Send</button>
+                    </div>
+                </div>
+                <div class="alert" ng-class="{'alert-success': !isError, 'alert-danger': isError}" ng-show="serverMessage || processedData">
+                    <p ng-bind="'Message: \'' + serverMessage + '\''"></p>
+                    <p ng-bind="'Data: \'' + (processedData | json) + '\''"></p>
+                </div>
+            </form>
+        </div>
+
+        <script src="../bower_components/angular/angular.js" language="JavaScript"></script>
+        <script src="app.js" language="JavaScript"></script>
+    </body>
+</html>

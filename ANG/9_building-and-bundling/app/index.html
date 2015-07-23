@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - Putting it all together</title>
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+    <body ng-app="app">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/search">Search</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container" ng-view></div>
+
+        <script src="../lib/js/angular.min.js" language="JavaScript"></script>
+        <script src="../lib/js/angular-route.min.js" language="JavaScript"></script>
+        <!-- inject:js -->
+        <!-- endinject -->
+    </body>
+</html>

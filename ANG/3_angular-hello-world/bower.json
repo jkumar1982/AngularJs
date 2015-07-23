@@ -1,0 +1,22 @@
+{
+  "name": "3_angular-hello-world",
+  "version": "1.0.0",
+  "authors": [
+    "Alberto Mijares <almilo@almilo.es>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "bootstrap": "~3.1.1"
+  }
+}

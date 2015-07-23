@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - AngularJS Forms</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body class="container">
+        <div class="jumbotron">
+            <h1>AngularJS Course - AngularJS Forms</h1>
+
+            <form class="form-horizontal" name="userDataFormController"
+                  ng-controller="UserDataController as userDataController"
+                  ng-submit="userDataController.submit(userDataFormController.$valid)"
+                  novalidate>
+                <div class="alert alert-danger" ng-if="userDataController.showMessages(userDataFormController)">
+                    <div ng-messages="userDataFormController.name.$error">
+                        <div ng-message="required">Name is required.</div>
+                    </div>
+                    <div ng-messages="userDataFormController.surname.$error">
+                        <div ng-message="required">Surname is required.</div>
+                    </div>
+                    <div ng-messages="userDataFormController.canton.$error">
+                        <div ng-message="required">Canton is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="name">Name</label>
+
+                    <div class="col-sm-9">
+                        <input class="form-control" id="name" name="name" ng-model="userDataController.name" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="surname">Surname</label>
+
+                    <div class="col-sm-9">
+                        <input class="form-control" id="surname" name="surname" ng-model="userDataController.surname" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="resident">Residence in Switzerland</label>
+
+                    <div class="col-sm-1">
+                        <input id="resident" ng-model="userDataController.resident" type="checkbox">
+                    </div>
+
+                    <div class="col-sm-8">
+                        <select class="form-control" id="canton" name="canton"
+                                ng-model="userDataController.canton"
+                                ng-required="userDataController.resident"
+                                ng-options="canton.id as canton.name for canton in userDataController.cantons">
+                            <option value="">-- Please, choose a canton --</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+                <div class="alert"
+                     ng-class="{'alert-success': userDataController.result.message, 'alert-danger': userDataController.result.error}"
+                     ng-if="userDataController.result">
+                    <span ng-bind="userDataController.result.message || userDataController.result.error"></span>
+                </div>
+            </form>
+        </div>
+
+        <script src="../node_modules/babel-core/browser.js"></script>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="../node_modules/angular-messages/angular-messages.js"></script>
+        <script src="app.js" type="text/ecmascript-6"></script>
+    </body>
+</html>

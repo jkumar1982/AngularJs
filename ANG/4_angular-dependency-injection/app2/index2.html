@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Dependency Injection II - Annotations, Provider</title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body class="container">
+        <div class="jumbotron" ng-controller="GreetingController">
+            <h2>AngularJS Dependency Injection II - Annotations, Provider</h2>
+
+            <h3>Name: <input ng-model="name" ng-change="greet(name)"></h3>
+
+            <h3 ng-bind='greeting'></h3>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="app2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - Putting it all together</title>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body ng-app="app">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/search">Search</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container" ng-view></div>
+
+        <script src="../bower_components/angular/angular.js" language="JavaScript"></script>
+        <script src="../bower_components/angular-route/angular-route.js" language="JavaScript"></script>
+        <script src="core/core-module.js" language="JavaScript"></script>
+        <script src="master-data/master-data-module.js" language="JavaScript"></script>
+        <script src="master-data/category-service.js" language="JavaScript"></script>
+        <script src="search/search-module.js" language="JavaScript"></script>
+        <script src="search/search-controller.js" language="JavaScript"></script>
+        <script src="search/search-service.js" language="JavaScript"></script>
+        <script src="app.js" language="JavaScript"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Course - AngularJS Directives</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body class="container">
+        <div class="jumbotron" ng-controller="ApplicationController as applicationController">
+            <h1>AngularJS Course - AngularJS Directives</h1>
+
+            <h4 class="alert"
+                ng-init="hoverStyle = 'alert-warning'"
+                ng-mouseenter="hoverStyle = 'alert-success'"
+                ng-mouseleave="hoverStyle = 'alert-warning'"
+                ng-class="hoverStyle">
+                Hover on me to change the alert type!!
+            </h4>
+
+            <h4 class="alert" ng-class="selectStyle">
+                Select the alert type!!
+                <select class="pull-right"
+                        ng-model="selectStyle"
+                        ng-options="alertCategory.id as alertCategory.label for alertCategory in applicationController.alertCategories">
+                    <option value="">-- select an alert type --</option>
+                </select>
+            </h4>
+
+            <h4 class="alert" style="cursor: pointer;"
+                ng-init="clickStyle = 0"
+                ng-click="clickStyle = clickStyle + 1"
+                ng-class="{'alert-danger': clickStyle % 3 === 0, 'alert-warning': clickStyle % 3 === 1, 'alert-success': clickStyle % 3 === 2}">
+                Click on me to change the alert type!!
+            </h4>
+
+            <h4 class="alert {{applicationController.changeStyle}}">
+                Type something to change the style:
+                <input type="text"
+                       ng-model="applicationController.alertStyle"
+                       ng-change="applicationController.updateChangeStyle()">
+            </h4>
+
+            <h4 class="alert alert-info" ac-alert>Click me to see this message in an alert!</h4>
+
+            <ac-caroussel ac-caroussel-message="Click me to change the alert type!"></ac-caroussel>
+        </div>
+
+        <script src="../node_modules/babel-core/browser.js"></script>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="app.js" type="text/ecmascript-6"></script>
+    </body>
+</html>

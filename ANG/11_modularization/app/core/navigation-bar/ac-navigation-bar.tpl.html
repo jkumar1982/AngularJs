@@ -1,0 +1,11 @@
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-href="{{getHomeUrl()}}"><img src="./logo.jpg" width="25px"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li ng-repeat="link in links"><a ng-href="#{{link.route}}" translate="{{link.label}}"></a></li>
+        </ul>
+        <div ng-transclude></div>
+    </div>
+</div>
