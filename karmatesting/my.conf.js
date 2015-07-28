@@ -15,11 +15,11 @@ module.exports = function(config) {
     preprocessors: {
     },
     reporters: ['progress'],
-    port: 9876,
+    port: 9997,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
     singleRun: false
   });
 };
